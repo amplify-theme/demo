@@ -1,0 +1,78 @@
+.product-table{
+    border-spacing: 0 16px;
+    border-collapse: separate;
+    width: 100%;
+    thead{
+        background: $brand-primary;
+         color: #fff;
+        th{
+            padding: 12px;
+            text-align: center;
+        }
+        th:first-child{
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        th:last-child{
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+    tbody{
+        .product-img {
+            min-width: 75px;
+            max-width: 75px;
+            object-fit: contain;
+            border-radius: 8px;
+            padding: 8px;
+        }
+        tr{
+            background: #fff;
+            vertical-align: top;
+            position: relative;
+            .position-absolute{
+                bottom: 12px;
+            }
+        }
+        td{
+            padding: 12px 4px;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.1);
+            border-width: 1px 0;
+            .btn-primary {
+                font-size: $font-size-sm;
+                background-color: $brand-gray;
+                border: none;
+                width: 100%;
+                &:hover {
+                    background-color: $brand-primary;
+                }
+            }
+        }
+        td:first-child{
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        td:last-child{
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            padding-right: 8px;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .fs-16{
+            margin-top: 6px;
+        }
+        input.w-110{
+            width: 80px !important;
+        }
+        .badge-img{
+            width: auto;
+            height: 35px;
+            object-fit: contain;
+            display: flex;
+            margin-left: auto;
+            margin-top: 4px;
+        }
+    }
+}

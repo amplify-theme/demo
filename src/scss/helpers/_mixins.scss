@@ -51,8 +51,13 @@
 // Normal Button Variants
 @mixin button-variant($bg-color) {
     background-color: $bg-color;
-    &:hover {
-        background-color: darken($bg-color, 10%);
+    &:hover, &:focus {
+        background-color: darken($bg-color, 5%);
+        box-shadow: none;
+        border-color: darken($bg-color, 5%);
+    }
+    &:disabled {
+        background-color: lighten($bg-color, 10%);
     }
 }
 
@@ -64,6 +69,8 @@
     &:hover {
         background-color: $color;
         color: $white-color;
+        font-weight: bold;
+        border: none !important;
     }
 }
 

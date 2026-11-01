@@ -85,6 +85,18 @@
     background-color: rgba($brand-danger, .09);
 }
 
+.table-primary,
+.table-primary td,
+.table-primary th {
+    background-color: rgba($brand-primary, .09);
+}
+
+.table-secondary,
+.table-secondary td,
+.table-secondary th {
+    background-color: rgba($brand-secondary, .09);
+}
+
 @media (max-width : $screen-sm) {
 
     .table-responsive {

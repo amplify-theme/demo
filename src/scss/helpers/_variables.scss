@@ -11,18 +11,20 @@
 $gray-darker: #374250;
 $gray-dark: #475467;
 $gray: #9da9b9;
-$gray-light: #e9e9ea;
+$gray-light: rgba(74, 74, 74, 0.5);
 $gray-lighter: #f6f7f8;
-$white-color: #ffffff;
-$black-color: #2b2b2b;
+$white-color: #fff;
+$black-color: #000;
 
 // Brand colors
-$brand-primary: #202549;
-$brand-info: #4d5154;
-$brand-success: #008b00;
-$brand-warning: #ffb74f;
-$brand-danger: #e31e27;
-$brand-light: #d2d3d5;
+$brand-primary: #002767;
+$brand-secondary: #6c757d;
+$brand-info: #50c6e9;
+$brand-success: #43d9a3;
+$brand-warning: #f37021;
+$brand-danger: #ff5252;
+$brand-light: #f5f5f5;
+$brand-gray: #343a40;
 
 // Body
 $body-bg: $white-color;
@@ -41,7 +43,8 @@ $quote-mark-color: $gray;
 $quote-author-color: $gray;
 
 // Borders
-$border-color: $gray-light;
+$border-width: 1px;
+$border-color: #e1e7ec;
 $border-light-color: rgba($white-color, 0.12);
 $border-dark-color: rgba($black-color, 0.12);
 
@@ -52,8 +55,8 @@ $highlight-color: #fff8b0;
 //
 //## Font, line-height, and color for body text, headings, and more.
 // -------------------------------------------------------
-$font-family-base: 'Inter', sans-serif;
-$font-family-headings: inherit;
+$font-family-base: "Source Sans 3", Helvetica, Arial, sans-serif;
+$font-family-headings: "Source Sans 3", sans-serif;
 
 // Font sizes
 $font-size-base: 16px;
@@ -126,7 +129,7 @@ $btn-text-transform: math-auto;
 $btn-font-weight: 500;
 $btn-text-color: $black-color;
 
-$btn-height: 44px;
+$btn-height: 35px;
 $btn-lg-height: 54px;
 $btn-sm-height: 36px;
 
@@ -156,14 +159,14 @@ $tools-icon-size: 1.2rem;
 //== Navigation
 //
 
-$nav-link-font-size: $font-size-sm; // 14px
+$nav-link-font-size: $font-size-base; // 14px
 $nav-link-font-weight: 500;
-$nav-link-color: $brand-primary;
+$nav-link-color: $gray-dark;
 $nav-link-hover-color: $brand-primary;
 $nav-link-active-color: $brand-primary;
 
 // Sub Menu / Mega Menu
-$sub-menu-width: 200px;
+$sub-menu-width: 250px;
 $sub-menu-shadow: 0 7px 22px -5px rgba(darken($gray-darker, 4%), 0.2);
 
 // Off-Canvas
@@ -197,15 +200,15 @@ $step-connect-height: 3px;
 //
 
 // Product
-$product-title-font-size: $font-size-h5;
+$product-title-font-size: $font-size-base;
 $product-title-color: $gray-darker;
 $product-title-hover-color: $brand-primary;
 $product-price-font-size: $font-size-base;
-$product-price-color: $gray-dark;
+$product-price-color: $gray-darker;
 
 // Shop View
-$shop-view-size: 43px;
-$shop-view-color: $gray-dark;
+$shop-view-size: $input-height;
+$shop-view-color: $brand-primary;
 $shop-view-bg-color: $white-color;
 $shop-view-hover-bg-color: $gray-lighter;
 $shop-view-active-bg-color: $brand-primary;
@@ -277,10 +280,10 @@ $tooltip-arrow-color: $tooltip-bg;
 //== Carousel
 //
 
-$carousel-navs-size: 32px;
-$carousel-navs-icon-size: 19px;
-$carousel-navs-bg: $white-color;
-$carousel-navs-color: $gray-darker;
+$carousel-navs-size: $btn-height;
+$carousel-navs-icon-size: 30px;
+$carousel-navs-bg: rgba(233, 233, 234, 1);
+$carousel-navs-color: $brand-info;
 $carousel-dots-size: 10px;
 $carousel-dots-color: $gray-dark;
 

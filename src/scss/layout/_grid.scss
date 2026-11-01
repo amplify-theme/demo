@@ -7,10 +7,10 @@
     overflow: hidden;
 
     &:not(.filter-grid) {
-        min-height: 180px;
+        min-height: 500px;
         background: {
             position: center;
-            image: url(../../images/loading.gif);
+            image: url(../images/loading.gif);
             repeat: no-repeat;
             size: 74px;
         }
@@ -131,7 +131,7 @@
 
             .grid-sizer,
             .grid-item {
-                width: 100%;
+                width: calc((100% / 2) - 15px);
             }
         }
     }
@@ -208,10 +208,11 @@
             &.cols-5,
             &.cols-4,
             &.cols-3,
-            &.cols-2 {
+            &.cols-2,
+            &.cols-1{
                 .grid-sizer,
                 .grid-item {
-                    width: 100%;
+                    width: calc(100% / 2);
                 }
             }
         }

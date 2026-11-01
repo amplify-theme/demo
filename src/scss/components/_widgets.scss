@@ -134,7 +134,7 @@
 .widget-title {
     margin-bottom: floor(calc($grid-vertical-step / 1.2)); //~20px
     padding-bottom: floor(calc($grid-vertical-step / 2)); //~12px
-    color: $black-color;
+    color: $gray-dark;
 
     font : {
         size: 14px;
@@ -146,7 +146,7 @@
 
 // Base Class
 .widget {
-    margin-bottom: floor(calc($grid-vertical-step * 1.6)); //~38px
+    margin-bottom: $grid-vertical-step; //~24px
 
     .form-group {
         margin-bottom: 0;
@@ -162,6 +162,13 @@
 
     .custom-control:last-child {
         margin-bottom: 0 !important;
+    }
+}
+
+.widget-wrapper {
+    .toggle-btn {
+        text-decoration: none;
+        color: $gray-dark;
     }
 }
 
@@ -352,53 +359,43 @@
 }
 
 // Tags Widget
-.tag {
-    display: inline-block;
-    height: $widget-tags-height;
+.widget-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
 
-    margin : {
-        right: 4px;
-        bottom: 8px;
-    }
+    .tag {
+        display: inline-block;
+        height: $widget-tags-height;
 
-    padding: 0 12px;
-    transition: all 0.3s;
-    border: 1px solid $border-color;
-    border-radius: calc($widget-tags-height / 2);
-    color: $widget-tags-color !important;
-
-    font : {
-        size: $widget-tags-font-size;
-        weight: 500;
-    }
-
-    line-height: $widget-tags-height - 3;
-    text-decoration: none !important;
-    white-space: nowrap;
-
-    &:hover {
-        background-color: $widget-tags-hover-bg;
+        padding: 0 12px;
+        transition: all 0.3s;
+        border: 1px solid $border-color;
+        border-radius: calc($widget-tags-height / 6);
         color: $widget-tags-color !important;
+
+        font: {
+            size: $widget-tags-font-size;
+            weight: 500;
+        }
+
+        line-height: $widget-tags-height - 3;
+        text-decoration: none !important;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: $widget-tags-hover-bg;
+            color: $widget-tags-color !important;
+        }
+
+        &.active {
+            border-color: $widget-tags-active-border-color;
+            background-color: $widget-tags-active-bg;
+            color: $widget-tags-active-color !important;
+            cursor: default;
+        }
     }
-
-    &.active {
-        border-color: $widget-tags-active-border-color;
-        background-color: $widget-tags-active-bg;
-        color: $widget-tags-active-color !important;
-        cursor: default;
-    }
 }
-
-.text-right .tag {
-    margin-right: 0;
-    margin-left: 4px;
-}
-
-.text-center .tag {
-    margin-right: 2px;
-    margin-left: 2px;
-}
-
 // Order Summary Widget
 .widget-order-summary .table {
     td {

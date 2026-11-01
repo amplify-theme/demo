@@ -16,7 +16,7 @@
     transform: translateZ(0);
     transition: all 0.4s;
     border: 1px solid transparent;
-    border-radius: floor(calc($btn-height / 2));
+    border-radius: floor($btn-height / 6);
     background: {
         color: transparent;
         image: none;
@@ -76,15 +76,15 @@ button:focus {
 // Button Sizes
 .btn-lg {
     height: $btn-lg-height;
-    border-radius: floor(calc($btn-lg-height / 2));
+    border-radius: floor($btn-lg-height / 6);
     line-height: ($btn-lg-height - 2);
 }
 
 .btn-sm {
     height: $btn-sm-height;
     padding: 0 18px;
-    border-radius: floor(calc($btn-sm-height / 2));
-    font-size: floor(calc($font-size-base * 0.75));
+    border-radius: floor($btn-sm-height / 6);
+    font-size: $font-size-sm;
     line-height: ($btn-sm-height - 2);
 }
 

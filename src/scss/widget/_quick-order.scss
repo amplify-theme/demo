@@ -1,0 +1,18 @@
+.x-quick-order {
+  .input-group {
+    display: flex;
+    gap: 0 !important;
+  }
+
+  .custom-file {
+    .custom-file-label {
+      border-radius: floor($input-height / 6) 0 0 floor($input-height / 6) !important;
+    }
+  }
+
+  #upload_btn {
+    margin: 0 !important;
+    border-radius: 0 floor($input-height / 6) floor($input-height / 6) 0 !important;
+    height: $input-height !important;
+  }
+}

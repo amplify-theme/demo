@@ -1,0 +1,12 @@
+.x-menu-category-menu, .sub-menu {
+
+  .x-menu-category-menu {
+    &.sub-menu {
+      top: 0 !important;
+    }
+
+    a {
+      position: relative;
+    }
+  }
+}

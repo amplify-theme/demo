@@ -2,66 +2,45 @@
     $error_title = isset($error_number) ? $error_number : '';
     $error = isset($error_number);
 @endphp
-    <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <x-amplify.head/>
-</head>
-<body>
-<div class="{{ template()->slug }}">
+<x-amplify.web-page>
     <!-- Top Bar -->
-    <div class="topbar-section">
-        <div
-            class="@if(template_option('full_screen_header')) container-fluid @else container @endif container-collapse-p0">
-            <x-site.top-bar/>
-        </div>
-    </div>
+    <x-notice-slider/>
+    <x-site.top-bar :render="theme_option('topbar_enabled')"/>
     <!-- Mobile Menu-->
     <x-menu.mobile-menu/>
     <!-- Desktop Menu-->
-    <div class="main-header">
-        <div class="@if(template_option('full_screen_header')) container-fluid @else container @endif container-collapse-p0">
-            <div class="row">
-                <div class="col-12">
-                    <header class="navbar border-0 px-0">
-                        <!-- Site Brand Logo -->
-                        <x-site.brand-logo/>
-                        <!-- Toolbar-->
-                        <x-site.toolbar/>
-                    </header>
+    <header @class(['navbar', 'navbar-sticky' => theme_option('sticky_header')])>
+        <div @class(['container-collapse-p0', 'container' => !theme_option('full_screen_header'), 'container-fluid' => theme_option('full_screen_header')])>
+            <!-- Search-->
+            <x-site.search :show-search-button="false" class="site-search">
+                <div>
+                    <i class="icon-search" id="icon-search_searchbar"></i>
                 </div>
-            </div>
-        </div>
-        <!--Site Menu -->
-        <div class="bg-primary">
-            <div class="@if(template_option('full_screen_header')) container-fluid @else container @endif">
-                <div class="row">
-                    <div class="col-12">
-                        <x-menu.primary-menu/>
+            </x-site.search>
+            <!-- Site Brand Logo -->
+            <x-site.brand-logo/>
+            <!-- Main Navigation-->
+            <x-menu.primary-menu/>
+            <!-- Toolbar-->
+            <x-site.toolbar>
+                @if(config('amplify.sayt.enabled', true))
+                    <div class="search show-search" data-title="Search">
+                        <i class="icon-search"></i>
                     </div>
-                </div>
-            </div>
+                @endif
+                <x-menu.cart-menu :show-badge="false"/>
+                <x-menu.account-menu :show-contact-avatar="false"/>
+            </x-site.toolbar>
         </div>
-    </div>
+    </header>
     <!-- Off-Canvas Wrapper-->
     <div class="offcanvas-wrapper" id="position-inherit">
         <!-- Page Content-->
+        <x-breadcrumb :title="$error_title" :error="$error" :hide-title="false"/>
         <div class="page-content-body">
-            <x-breadcrumb :title="$error_title" :error="$error"/>
-            @yield('page-content')
-            {!! Blade::render($content ?? '')  !!}
+            @yield('content')
         </div>
         <!-- Footer-->
         <x-site.footer/>
     </div>
-    <!-- Backdrop-->
-    <div class="site-backdrop"></div>
-    <!-- Back To Top Button-->
-    <a class="scroll-to-top-btn" href="#">
-        <i class="icon-arrow-up fa-beat pe-7s-angle-up font-weight-bolder" style="font-size: 2rem;"></i>
-    </a>
-</div>
-<x-amplify.foot/>
-</body>
-</html>
-
+</x-amplify.web-page>

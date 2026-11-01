@@ -73,7 +73,7 @@
 .pswp__bg {
     left: 0;
     top: 0;
-    background: #000;
+    background: #000000cc;
     opacity: 0;
     transform: translateZ(0);
     will-change: opacity

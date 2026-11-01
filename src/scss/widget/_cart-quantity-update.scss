@@ -1,0 +1,36 @@
+.x-cart-quantity-update {
+  gap: 4px;
+
+  input.form-control {
+    @extend .form-control-sm;
+  }
+
+
+  @media (min-width: $screen-sm) {
+
+    input.item-quantity {
+      min-width: 100px;
+    }
+  }
+
+  button.item-decrease, button.item-increase, button.btn-wishlist {
+    @extend .btn-sm;
+    @extend .btn;
+    margin: 0 !important;
+    padding: 0 9px !important;
+    width: 36px !important;
+
+    &:hover {
+      width: 36px !important;
+    }
+  }
+
+  button.item-decrease {
+    @extend .btn-secondary;
+  }
+
+  button.item-increase {
+    @extend .btn-primary;
+  }
+
+}

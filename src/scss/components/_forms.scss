@@ -5,7 +5,7 @@
 .form-control {
     padding: 0 18px 3px;
     border: 1px solid darken($border-color, 2%);
-    border-radius: ceil(calc($input-height / 6)) !important;
+    border-radius: ceil($input-height / 6) !important;
     background-color: $white-color;
     color: $gray-dark;
     font: {
@@ -77,7 +77,6 @@ select.form-control {
     margin-bottom: floor(calc($grid-vertical-step / 1.2)) !important; //~20px
     label {
         margin-bottom: 8px;
-        //padding-left: 18px;
         font: {
             size: $font-size-xs;
             weight: 500;
@@ -93,7 +92,7 @@ select.form-control {
 
 // Input sizes
 .form-control-lg {
-    border-radius: ceil(calc($input-height-lg / 2));
+    border-radius: ceil($input-height-lg / 6);
     font-size: $font-size-base;
 
     &:not(textarea) {
@@ -117,7 +116,7 @@ select.form-control.form-control-lg {
 
 .form-control-sm {
     padding-bottom: 2px;
-    border-radius: ceil(calc($input-height-sm / 2));
+    border-radius: ceil($input-height-sm / 6);
 
     &:not(textarea) {
         height: $input-height-sm;
@@ -443,7 +442,7 @@ select.form-control.form-control-sm {
 .valid-feedback,
 .invalid-feedback {
     margin-top: 5px;
-    padding-left: 18px;
+    padding-left: floor($btn-height / 6);
 }
 
 .custom-control {

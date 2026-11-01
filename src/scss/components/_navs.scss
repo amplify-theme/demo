@@ -52,7 +52,7 @@
     .nav-item.show .nav-link,
     .nav-link.active {
         border-color: $border-color $border-color $white-color;
-        color: darken($gray, 3%);
+        color: #94a1b3;
     }
 }
 
@@ -83,7 +83,7 @@
         margin-right: 5px;
         padding: 8px 16px;
         transition: all 0.3s;
-        border-radius: calc($btn-height / 2);
+        border-radius: floor($btn-height / 6);
         color: $btn-text-color;
         font: {
             size: $btn-sm-font-size;

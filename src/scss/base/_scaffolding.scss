@@ -11,7 +11,7 @@ html * {
 body {
     background: {
         position: center;
-        color: #f9fafb;
+        color: $body-bg;
         repeat: no-repeat;
         size: cover;
     }
@@ -38,6 +38,26 @@ a {
     &:focus {
         outline: none;
     }
+}
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle{
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus,
+.btn-outline-primary.focus,
+.btn-outline-primary:focus{
+    box-shadow: none;
 }
 
 .small,
@@ -130,7 +150,7 @@ figure {
         left: 0;
         width: 100%;
         margin: 0;
-        padding: floor(calc($grid-vertical-step / 2)); // ~12px
+        padding: floor($grid-vertical-step / 6);
         font-size: $font-size-sm;
     }
 }

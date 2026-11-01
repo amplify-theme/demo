@@ -1,0 +1,102 @@
+name: Amplify Demo Theme
+
+slug: demo
+
+version: 1.0.0
+
+asset: 'assets'
+
+layout: ''
+
+author:
+  - Amplify Core Team <info@easyask.com>
+  - Mohammad Hafijul Islam <hafijul.islam@easyask.com>
+  - Saleh Ahammed Noor <saleh.noor@easyask.com>
+  - Nosin Atia <nosin.atia@easyask.com>
+
+description: >
+  This is default theme of Amplify ecosystem for startup.
+
+homepage: https://easyask.com
+
+screenshot: assets/screenshot.png
+
+readme: README.md
+
+changelog: CHANGELOG.md
+
+updates:
+  enabled: true
+  channel: stable
+  source:
+    type: github
+    url: https://github.com/amplify-themes/demo.git
+    reference: ^1.5
+    prefer: dist
+
+options:
+  - name: primary_color
+    label: Brand Color
+    type: color
+    value: '#0da9ef'
+    tab: Appearance
+
+  - name: secondary_color
+    label: Secondary Color
+    type: color
+    value: '#1F3567'
+    tab: Appearance
+
+  - name: success_color
+    label: Success Color
+    type: color
+    value: '#43d9a3'
+    tab: Appearance
+
+  - name: info_color
+    label: Info Color
+    type: color
+    value: '#50c6e9'
+    tab: Appearance
+
+  - name: warning_color
+    label: Warning Color
+    type: color
+    value: '#ffb74f'
+    tab: Appearance
+
+  - name: danger_color
+    label: Danger Color
+    type: color
+    value: '#ff5252'
+    tab: Appearance
+
+  - name: light_color
+    label: Light Color
+    type: color
+    value: '#f8f9fa'
+    tab: Appearance
+
+  - name: dark_color
+    label: Dark Color
+    type: color
+    value: '#343a40'
+    tab: Appearance
+
+  - name: full_screen_header
+    label: Use Full Header & Breadcrumb
+    type: boolean
+    value: 'true'
+    tab: Option
+
+  - name: topbar_enabled
+    label: Use Site Topbar
+    type: boolean
+    value: 'true'
+    tab: Option
+
+  - name: sticky_header
+    label: Use Sticky Top Navigation
+    type: boolean
+    value: 'true'
+    tab: Option

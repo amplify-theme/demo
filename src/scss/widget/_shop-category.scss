@@ -1,0 +1,13 @@
+//card design
+.x-shop-categories {
+  .widget-categories {
+    .widget-body {
+      &.list {
+        .shop-category-list {
+          height: 250px;
+          overflow-y: auto;
+        }
+      }
+    }
+  }
+}

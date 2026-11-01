@@ -798,6 +798,8 @@ jQuery(document).ready(function ($) {
                 // define options (if needed)
                 options = {
 
+                    shareEl: false,
+
                     closeOnScroll: false,
 
                     // define gallery index (for URL)
@@ -895,6 +897,7 @@ jQuery(document).ready(function ($) {
     // Product Gallery
     //------------------------------------------------------------------------------
     var $productCarousel = $('.product-carousel');
+
     if ($productCarousel.length) {
 
         // Carousel init
@@ -994,4 +997,7 @@ jQuery(document).ready(function ($) {
 
     //Select2 Defaults
     $.fn.select2.defaults.set("theme", "bootstrap4");
-});/*Document Ready End*/
+
+    //Bootstrap Carousel
+    $('#carouselExampleCaptions').carousel();
+});

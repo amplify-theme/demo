@@ -1,0 +1,10 @@
+.x-product-product-gallery {
+  border: none;
+  height: unset;
+
+  .product-gallery {
+    .gallery-wrapper {
+      border: none !important;
+    }
+  }
+}

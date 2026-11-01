@@ -1,0 +1,14 @@
+.x-cart-item-actions {
+
+  button.discard-from-cart {
+    @extend .btn-secondary;
+  }
+  button.update-from-cart {
+    @extend .btn-success;
+  }
+
+  button.remove-from-cart {
+    @extend .btn-danger;
+  }
+
+}

@@ -5,7 +5,8 @@
  */
 
 //Import Google Fonts (Maven Pro)
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 
 // Helpers: Variables, Mixins and Placeholders
 @import 'helpers/variables';
@@ -41,6 +42,7 @@
 @import 'components/widgets';
 @import 'components/steps';
 @import 'components/banners';
+@import 'components/product-list';
 
 // Layout
 @import 'layout/section';
@@ -57,6 +59,13 @@
 //Widgets
 @import "widget/product-slider";
 @import "widget/shop-sidebar";
-@import "template/common";
-@import "template/template";
-@import "template/overwrite";
+@import "widget/shop-category";
+@import "widget/mega-dropdown";
+@import "widget/site-search";
+@import "widget/product-gallery";
+@import "widget/cart-quantity-update";
+@import "widget/cart-item-actions";
+@import "widget/shop-search-in-result";
+@import "widget/quick-order";
+
+@import "../css/custom";
