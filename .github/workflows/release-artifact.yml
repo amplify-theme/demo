@@ -1,0 +1,63 @@
+name: Build Theme Release
+
+on:
+  release:
+    types: [ published ]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Prepare Theme Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Compile Release Assets
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+      - run: npm install --force
+      - run: npm run prod
+
+      - name: Clean build artifact
+        shell: bash
+        run: |
+          set -e
+
+          # Keep only the required theme files and assets directory.
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name 'assets' \
+            ! -name 'CHANGELOG.md' \
+            ! -name 'error.blade.php' \
+            ! -name 'index.blade.php' \
+            ! -name 'LICENSE.md' \
+            ! -name 'README.md' \
+            ! -name 'SECURITY.md' \
+            ! -name 'theme.yaml' \
+            ! -name '.git' \
+            -exec rm -rf {} +
+
+          # Remove Git metadata from the release package.
+          rm -rf .git
+
+          echo "Release artifact contents:"
+          ls -la
+
+      - name: Create theme archive
+        run: |
+          zip -r "${GITHUB_WORKSPACE}/theme-${GITHUB_REF_NAME}.zip" . \
+            -x "*.git*"
+
+      - name: Upload release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "${GITHUB_REF_NAME}" \
+            "theme-${GITHUB_REF_NAME}.zip" \
+            --clobber
