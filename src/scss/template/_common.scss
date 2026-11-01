@@ -1,0 +1,94 @@
+body {
+    padding: 0 !important;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.w-70 {
+    width: 70px;
+}
+
+.w-110 {
+    width: 110px;
+}
+
+.mw-200 {
+    max-width: 200px;
+}
+
+.rounded-md {
+    border-radius: 8px;
+}
+
+.btn {
+    border-radius: 8px !important;
+}
+
+.owl-carousel-arrow-top {
+    .owl-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .owl-prev,
+    .owl-next {
+        width: 33px;
+        height: 33px;
+        line-height: 28px;
+        margin-top: -62px;
+        background-color: #e9e9ea;
+        color: #1b0001;
+    }
+
+    .owl-next {
+        right: 0;
+    }
+
+    .owl-prev {
+        right: 44px;
+        left: auto;
+    }
+
+    .owl-prev:hover,
+    .owl-next:hover {
+        background: #1b0001;
+        color: #fff;
+    }
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+select.form-control {
+    background-size: 40px 9px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+@media (max-width: $screen-sm) {
+    .w-80 {
+        width: 80%;
+    }
+
+    .w-sm-100 {
+        width: 100%;
+    }
+}
+
+@media (min-width: $screen-md) {
+    .d-md-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: $nav-collapse) {
+    .offcanvas-toggle.menu-toggle {
+        padding-inline: 10px;
+    }
+}

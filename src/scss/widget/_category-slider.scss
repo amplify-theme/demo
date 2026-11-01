@@ -1,0 +1,18 @@
+.x-category-slider {
+
+  h3 {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    width: 100%;
+  }
+}
