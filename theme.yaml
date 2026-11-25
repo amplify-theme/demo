@@ -30,7 +30,7 @@ updates:
   channel: stable
   source:
     type: github
-    url: https://github.com/amplify-themes/demo.git
+    url: https://github.com/amplify-theme/demo.git
     reference: ^1.0.0
     prefer: dist
 
